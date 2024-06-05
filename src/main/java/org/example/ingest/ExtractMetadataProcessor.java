@@ -16,7 +16,7 @@ public class ExtractMetadataProcessor extends AbstractProcessor {
     private final String field;
     private final String targetField;
 
-    public ExtractMetadataProcessor(String tag, String description, String field, String targetField) throws IOException {
+    public ExtractMetadataProcessor(String tag, String description, String field, String targetField) {
         super(tag, description);
         this.field = field;
         this.targetField = targetField;

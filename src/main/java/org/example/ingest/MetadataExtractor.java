@@ -10,9 +10,6 @@ import org.slf4j.LoggerFactory;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 public class MetadataExtractor {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
@@ -27,11 +24,13 @@ public class MetadataExtractor {
             parser.parse(input, handler, metadata);
 
             StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append("{\n");
             for (String name : metadata.names()) {
-                stringBuilder.append(name + ": " + metadata.get(name) + ",\n");
+                stringBuilder.append(String.format("%s: %s,\n", name, metadata.get(name)));
                 logger.info("{}: {}", name, metadata.get(name));
             }
-            stringBuilder.delete(stringBuilder.length() - 2, stringBuilder.length() - 1);
+            stringBuilder.deleteCharAt(stringBuilder.length() - 2);
+            stringBuilder.append("}");
             return stringBuilder.toString();
         } catch (IOException e) {
             logger.error("Error reading the image file.", e);
