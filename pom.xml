@@ -22,9 +22,6 @@
             <artifactId>tika-parsers-standard-package</artifactId>
             <version>2.9.2</version>
         </dependency>
-
-
-
         <dependency>
             <groupId>org.elasticsearch</groupId>
             <artifactId>elasticsearch</artifactId>
@@ -35,11 +32,11 @@
             <artifactId>elasticsearch-rest-high-level-client</artifactId>
             <version>7.17.21</version>
         </dependency>
-        <dependency>
-            <groupId>org.elasticsearch</groupId>
-            <artifactId>elasticsearch-x-content</artifactId>
-            <version>8.13.4</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.elasticsearch</groupId>-->
+<!--            <artifactId>elasticsearch-x-content</artifactId>-->
+<!--            <version>8.13.4</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 
