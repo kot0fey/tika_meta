@@ -1,0 +1,6 @@
+description=Metadata Ingest Plugin for elasticsearch.
+version=1.0-SNAPSHOT
+name=tika-test
+classname=org.example.ingest.IngestMetaExtractPlugin
+java.version=1.8
+elasticsearch.version=8.13.4
