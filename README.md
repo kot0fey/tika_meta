@@ -28,7 +28,7 @@
         }
     ]
 }
-## 3. Добавление документа в индекс. 
+## 2. Добавление документа в индекс. 
 ### Method: POST
 ### URL: http:\\localhost:9200\my_index\_doc?pipeline=base64_pipeline
 ### Body:
@@ -38,6 +38,6 @@
   "timestamp": "2024-06-06T10:00:00Z",
   "base64":"dGVzdAo="
 }
-## 4. Просмотр добавленных документов. 
+## 3. Просмотр добавленных документов. 
 ### Method: GET
 ### URL: localhost:9200\my_index\_search
