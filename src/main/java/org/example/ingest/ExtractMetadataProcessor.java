@@ -64,8 +64,8 @@ public class ExtractMetadataProcessor extends AbstractProcessor {
 
         @Override
         public Processor create(Map<String, Processor.Factory> factories, String tag, String description, Map<String, Object> config) throws Exception {
-            String field = readStringProperty(TYPE, tag, config, "path");
-            String targetField = readStringProperty(TYPE, tag, config, "metadata", "default_field_name");
+            String field = readStringProperty(TYPE, tag, config, "field", "base64");
+            String targetField = readStringProperty(TYPE, tag, config, "target_field", "metadata");
             return new ExtractMetadataProcessor(tag, description, field, targetField);
         }
     }
