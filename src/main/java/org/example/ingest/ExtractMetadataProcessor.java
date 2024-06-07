@@ -44,7 +44,6 @@ public class ExtractMetadataProcessor extends AbstractProcessor {
             parser.parse(stream, handler, metadata, context);
             for (String name : metadata.names()) {
                 ingestDocument.setFieldValue(targetField + "." + name, metadata.get(name));
-//                ingestDocument.setFieldValue(name, metadata.get(name));
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

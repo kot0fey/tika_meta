@@ -1,4 +1,3 @@
 org\example\ingest\ExtractMetadataProcessor.class
 org\example\ingest\IngestMetaExtractPlugin.class
 org\example\ingest\ExtractMetadataProcessor$Factory.class
-org\example\ingest\Main.class
